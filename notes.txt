@@ -1,0 +1,69 @@
+
+
+Bag Packing Problem
+
+This is a simple implementation of a genetic algorithm, to the bin packing optimisation problem.
+This means that genetic theory is applied to the problem, which can be done by selection the most successful in the population, 
+using some function by which to breed them and then applying random mutations to avoid a local maximum. 
+
+
+To explain how it works first let me describe the model I used:
+    
+    bricks
+        they are items with both a value and a weight
+
+    bag
+        hold bricks
+
+    generation
+        a collection of bags
+
+The goal (fitness function) is to have the bag with the highest value.
+
+
+Description of the algorithm
+
+I first generate a new generation which is essentially bags with random bricks in chosen from a pool.
+Then I choose the top 50% of that generation and randomly pair them together
+I breed these pairs to create 4 children from each pair which get a random assortment of bricks from their parents
+Children then have a variable chance of being mutated which means they gain or lose a brick. ( the brick they gain isn't necessarily from their parents)
+
+To see whether the algorithm gets the optimal answer, we can use a non genetic algorithm to calculate it which goes as follows:
+
+Find the brick with the best value/weight value
+put as many of these in the bag until you can fit no more
+then put the next item in the bag until you can fit no more of them
+continue until the bag is full or you have tried to add all the bricks
+
+
+Questions I want to answer:
+    How does the generation size effect finding the optimal answer?
+    How does the generation number effect finding the optimal answer?
+    How does mutation variation effect finding the optimal answer?
+
+
+Generation Size
+
+    How does the size of the generation effect how quickly the optimal answer is reached?
+    If we look at genetic theory then the smaller the generation size is,
+    the less genetic diversity there is within a population this means that local maximums
+    are reached fairly often and if the value of mutation is low then the population may never
+    escape from the local maximum.
+    
+    If we look at a population with no mutation then we can see that their maximum is totally at the mercy of the bricks
+    they initially receive.
+    
+    <graphs of populations reaching local maximums generation size small, 0 mutation>
+    
+    If we then increase the mutation value we can see that sometime it escapes its local maximums but often doesn't.
+    
+    <graphs with same gen size but more and more mutation>
+    
+    now if we increase the population size we see that without mutation it almost always reaches the optimal value
+    
+    <lage generation size graph>
+    
+
+
+
+        
