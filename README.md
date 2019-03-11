@@ -43,11 +43,11 @@ continue until the bag is full or you have tried to add all the bricks
 
 This is what it looks like tracking the progress of the value of each of the bags in a generation.
 
-![all_values](images/all_values_50_gen_size_8_max_weight_50.png)
+![all_values](image/all_values_50_gen_size_8_max_weight_50.png)
 
 Its quite messy so to show the progress I only display the bag with the max value, like this.
 
-![max_values](images/max_value_50_gen_size_10_max_weight_50.png)
+![max_values](image/max_value_50_gen_size_10_max_weight_50.png)
 
 
 ##Value of mutation
@@ -56,7 +56,7 @@ This graph shows two max value lines.
 The blue line showing a generation with no mutation,
 and the red line showing a generation with mutation.
 
-![local_min](images/local_min.png)
+![local_min](image/local_min.png)
 
 You can clearly see that the blue line reaches a local minimum.
 As its bricks cannot randomly mutate to produce a better result.
@@ -66,7 +66,7 @@ Local minimums can be effected by the generation size as the smaller the generat
 
 If we run 50 generations 5000 times and see who produces the highest value in the generation we get this.
 
-![effect_of_mutation](images/effect_of_mutation_in_large_population.png)
+![effect_of_mutation](image/effect_of_mutation_in_large_population.png)
 
 We see that a small amount of mutation (1 in 8 chance of mutation that a mutation happens per child) often produces the
 highest value.
@@ -76,6 +76,7 @@ bad ones.
 
 Finally, when we have a half chance of a mutation in a child we can see that it has a negative effect in the values it
 produces.
+
 
 
 
