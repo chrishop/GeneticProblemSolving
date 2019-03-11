@@ -2,6 +2,7 @@
 
 Bag Packing Problem
 
+
 This is a simple implementation of a genetic algorithm, to the bin packing optimisation problem.
 This means that genetic theory is applied to the problem, which can be done by selection the most successful in the population, 
 using some function by which to breed them and then applying random mutations to avoid a local maximum. 
